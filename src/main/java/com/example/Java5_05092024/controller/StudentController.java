@@ -73,7 +73,7 @@ public class StudentController {
                 
             }
         }
-        return "student/index";
+        return "redirect:/student/list";
     }
 
     @GetMapping("/detail")
@@ -92,6 +92,6 @@ public class StudentController {
             int index = studentDao.getIndexStudent(Integer.parseInt(id));
             studentDao.deleteStudent(index);
         }
-        return "student/index";
+        return "redirect:/student/list";
     }
 }
