@@ -16,14 +16,14 @@ public class StudentDao {
 
     List<Student> Students = new ArrayList<>();
     public StudentDao() {
-        Student student1 = new Student(1, "Hieu", 20, "SD18301");
-        Student student2 = new Student(2, "Hieu", 20, "SD18301");
-        Student student3 = new Student(3, "Hieu", 20, "SD18301");
-        Student student4 = new Student(4, "Hieu", 20, "SD18301");
-        Students.add(student1);
-        Students.add(student2);
-        Students.add(student3);
-        Students.add(student4);
+//        Student student1 = new Student(1, "Hieu", 20, "SD18301");
+//        Student student2 = new Student(2, "Hieu", 20, "SD18301");
+//        Student student3 = new Student(3, "Hieu", 20, "SD18301");
+//        Student student4 = new Student(4, "Hieu", 20, "SD18301");
+//        Students.add(student1);
+//        Students.add(student2);
+//        Students.add(student3);
+//        Students.add(student4);
     }
     public List<Student> getAllData(){
         return Students;
@@ -50,6 +50,9 @@ public class StudentDao {
     }
     public int getIdStudent(){
         int size = Students.size();
+        if(size == 0){
+            return 1;
+        }
         Student student = Students.get(size-1);
         return student.getId()+1;
     }
